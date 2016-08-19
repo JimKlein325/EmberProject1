@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  commentsCount: function () {
+    return this.get('comments.length');
+
+  },
+  hasComments: function() {
+  return Number(this.get('comments.length')) > 0;
+},
+
   model(params) {
   return this.store.findRecord('question', params.question_id);
 },

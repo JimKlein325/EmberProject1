@@ -14,12 +14,11 @@
 
     <div class="form-group">
       <label for="notes">Notes</label>
-        {{textarea cols="80" rows="4" value=notes id="notes"}}
-      </div>
-
-      <button {{action 'save'}}>Save</button>
-    </form>
-  </div>
-  {{else}}
-  <button {{action 'toggleForm'}}>New Post</button>
-  {{/if}}
+      {{textarea cols="80" rows="4" value=notes id="notes"}}
+    </div>
+    <button {{action 'save'}}>Save</button>
+  </form>
+</div>
+{{else}}
+<button {{action 'toggleForm'}}>New Post</button>
+{{/if}}
