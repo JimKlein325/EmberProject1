@@ -1,24 +1,35 @@
 {{#if formIsVisible}}
 <h3>New Question</h3>
 <div>
-  <form>
+  <form class="form-horizontal">
     <div class="form-group">
-      <label for="author">Your Name</label>
-      {{input value=author id="author"}}
+      <label for="author" class="control-label col-xs-2">Your Name</label>
+      <div class="col-xs-10">
+        {{input value=author id="author"}}
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="text">Question</label>
-      {{textarea cols="80" rows="6" value=text }}
+      <label for="text" class="control-label col-xs-2">Question</label>
+      <div class="col-xs-10">
+        {{textarea cols="80" rows="6" value=text }}
+      </div>
     </div>
 
     <div class="form-group">
-      <label for="notes">Notes</label>
-      {{textarea cols="80" rows="4" value=notes id="notes"}}
+      <label for="notes" class="control-label col-xs-2">Notes</label>
+      <div class="col-xs-10">
+        {{textarea cols="80" rows="4" value=notes id="notes"}}
+      </div>
     </div>
-    <button {{action 'save'}}>Save</button>
+    <div class="col-xs-2">
+    </div>
+    <div class="col-xs-10">
+      <button {{action 'save'}}>Save</button>
+    </div>
+
   </form>
 </div>
 {{else}}
-<button {{action 'toggleForm'}}>New Post</button>
+<button {{action 'toggleForm'}}>New Question</button>
 {{/if}}

@@ -1,53 +1,48 @@
-# Ember-proj8
+# Question and Answer App
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### Ember JS skill demonstration project:  Week 3 - August, 2016
+
+#### By Jim Klein
+
+## Description
+
+Question and Answer App is a sample application for demonstrating basic proficiency in Ember JS and related build tools used to create simple web apps.
+
+A user can add, edit and view question items, which include the author's name, their question, and notes.   Additional functionality allows other users to add and edit answers to questions.
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
+On the windows platform:
+* Download and install Node.js: https://nodejs.org/en/download/
+* Install Node package manager: npm install
+* Install Bower:  npm install -g bower
+* Install Ember CLI: npm install -g ember-cli
+*
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+## App Installation
 
-## Installation
-
-* `git clone <repository-url>` this repository
+`git clone https://github.com/JimKlein325/EmberProject1.git` this repository
 * change into the new directory
+* Install ember-cli-windows: npm install ember-cli-windows -g
+* Enter this command:  ember-cli-windows
 * `npm install`
 * `bower install`
+* Install EmberFire: ember install emberfire
 
-## Running / Development
+## Running the application
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit this app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Technologies Used
+* Ember JS MVC:  Views implemented the following technologies:
+Router: maps url to a route, Route handler: loads corresponding template and model; Templates:  Loads components, accesses model data provided by route handler, displays component content; Components: displays component content(components consist of two files: A template written in Handlebars, and a source file written in JavaScript);  Models: persistent data source;  
+* Node.js
+* Node Package Manager to manage build dependencies.
+* Bower to manage front-end dependencies (optimized for frontend packages like Bootstrap and jQuery).
+* HTML, JavaScript, CSS
+* Bootstrap
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+### License
+MIT License  Copyright (c) 2016 **Jim Klein**
