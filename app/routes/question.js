@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  commentsCount: function () {
-    return this.get('comments.length');
+  answersCount: function () {
+    return this.get('answers.length');
 
   },
-  hasComments: function() {
-  return Number(this.get('comments.length')) > 0;
+  hasAnswers: function() {
+  return Number(this.get('answers.length')) > 0;
 },
 
   model(params) {
@@ -15,11 +15,16 @@ export default Ember.Route.extend({
 
 
   actions: {
-  //  save3(params) {
-  //    var newRental = this.store.createRecord('rental', params);
-  //    newRental.save();
-  //    this.transitionTo('index');
-  //  },
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        return question.save();
+      });
+      this.transitionTo('question', params.question.id);
+    },
 
   update(question, params) {
     Object.keys(params).forEach(function(key) {
