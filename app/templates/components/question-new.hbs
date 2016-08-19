@@ -1,1 +1,25 @@
-{{yield}}
+{{#if formIsVisible}}
+<h3>New Question</h3>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="author">Your Name</label>
+      {{input value=author id="author"}}
+    </div>
+
+    <div class="form-group">
+      <label for="text">Question</label>
+      {{textarea cols="80" rows="6" value=text }}
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+        {{textarea cols="80" rows="4" value=notes id="notes"}}
+      </div>
+
+      <button {{action 'save'}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button {{action 'toggleForm'}}>New Post</button>
+  {{/if}}

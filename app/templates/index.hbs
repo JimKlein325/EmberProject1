@@ -1,1 +1,7 @@
-{{outlet}}
+<h1>Questions</h1>
+{{#each model as |question|}}
+  {{question-tile question=question}}
+{{/each}}
+
+<hr>
+{{question-new save="save"}}
