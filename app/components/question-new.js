@@ -5,6 +5,10 @@ export default Ember.Component.extend({
   actions: {
     toggleForm() {
       this.set('formIsVisible', true);
+      this.set('text', "");
+      this.set('author', "");
+      this.set('notes', "");
+
     },
     save() {
       var params = {
