@@ -1,21 +1,24 @@
 {{#if updateForm}}
   <div>
-    <form>
+    <form class="form-horizontal">
       <div class="form-group">
-        <label for="text">Question</label>
-        {{input value=text id="text" placeholder=question.text}}
+        <label for="text" class="control-label col-xs-2">Question</label>
+        <div class="control-label col-xs-2">
+          {{textarea cols="80" rows="3" value=text id="text" placeholder=question.text}}
+        </div>
       </div>
-
       <div class="form-group">
-        <label for="author">Author</label>
-        {{input value=author id="author" placeholder=question.author}}
+        <label for="author" class="control-label col-xs-2">Author</label>
+        <div class="col-xs-10">
+          {{input value=author id="author" placeholder=question.author}}
+        </div>
       </div>
-
       <div class="form-group">
-        <label for="notes">Notes</label>
-        {{input value=notes id="notes" placeholder=question.notes}}
+        <label for="notes" class="control-label col-xs-2">Notes</label>
+        <div class="col-xs-10">
+          {{textarea cols="80" rows="2" value=notes id="notes" placeholder=question.notes}}
+        </div>
       </div>
-
       <button {{action 'update' question}}>Save</button>
     </form>
   </div>

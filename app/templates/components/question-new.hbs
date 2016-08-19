@@ -8,18 +8,16 @@
         {{input value=author id="author"}}
       </div>
     </div>
-
     <div class="form-group">
       <label for="text" class="control-label col-xs-2">Question</label>
       <div class="col-xs-10">
-        {{textarea cols="80" rows="6" value=text }}
+        {{textarea cols="80" rows="3" value=text }}
       </div>
     </div>
-
     <div class="form-group">
       <label for="notes" class="control-label col-xs-2">Notes</label>
       <div class="col-xs-10">
-        {{textarea cols="80" rows="4" value=notes id="notes"}}
+        {{textarea cols="80" rows="2" value=notes id="notes"}}
       </div>
     </div>
     <div class="col-xs-2">
@@ -27,7 +25,6 @@
     <div class="col-xs-10">
       <button {{action 'save'}}>Save</button>
     </div>
-
   </form>
 </div>
 {{else}}

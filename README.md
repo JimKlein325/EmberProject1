@@ -6,33 +6,23 @@
 
 ## Description
 
-Question and Answer App is a sample application for demonstrating basic proficiency in Ember JS and related build tools used to create simple web apps.
-
+Question and Answer App s a sample application for demonstrating basic proficiency in Ember JS and related build tools used to create simple web apps.
+git
 A user can add, edit and view question items, which include the author's name, their question, and notes.   Additional functionality allows other users to add and edit answers to questions.
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-On the windows platform:
-* Download and install Node.js: https://nodejs.org/en/download/
-* Install Node package manager: npm install
-* Install Bower:  npm install -g bower
-* Install Ember CLI: npm install -g ember-cli
-*
 
 ## App Installation
 
-`git clone https://github.com/JimKlein325/EmberProject1.git` this repository
-* change into the new directory
+* Clone this repository: `git clone https://github.com/JimKlein325/EmberProject1.git` this repository
+* Change into the new directory
+* Install Node package manager: `npm install`
+* Install Bower: `bower install`
+* Install EmberFire: ember install emberfire
 * Install ember-cli-windows: npm install ember-cli-windows -g
 * Enter this command:  ember-cli-windows
-* `npm install`
-* `bower install`
-* Install EmberFire: ember install emberfire
 
 ## Running the application
 
-* `ember serve`
+* To run the ember server on a local machine, in terminal type: `ember serve`
 * Visit this app at [http://localhost:4200](http://localhost:4200).
 
 ## Technologies Used
