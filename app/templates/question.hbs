@@ -3,6 +3,6 @@
 <hr>
 <h3>Answers</h3>
 {{#each model.answers as |answer|}}
-  {{answer-detail answer=answer}}
+  {{answer-detail answer=answer updateAnswer="updateAnswer"}}
 {{/each}}
 {{answer-new question=model saveAnswer="saveAnswer"}}

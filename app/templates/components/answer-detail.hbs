@@ -3,12 +3,12 @@
     <form>
       <div class="form-group">
         <label for="text">Question</label>
-        {{input value=text id="text" placeholder=answer.text}}
+        {{input value=text placeholder=answer.text}}
       </div>
 
       <div class="form-group">
         <label for="author">Author</label>
-        {{input value=author id="author" placeholder=answer.author}}
+        {{input value=author placeholder=answer.author}}
       </div>
 
       <button {{action 'update' answer}}>Save</button>
