@@ -11,13 +11,8 @@ export default Ember.Component.extend({
         text: this.get('text'),
         author: this.get('author'),
         notes: this.get('notes')
-
       };
       this.set('updateForm', false);
-      // this.set('text', "");
-      // this.set('author', "");
-      // this.set('notes', "");
-
       this.sendAction('update', question, params);
     }
   }

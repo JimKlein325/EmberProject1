@@ -5,18 +5,15 @@ export default Ember.Component.extend({
   actions:{
     showForm(){
       this.set('updateForm', true);
+      // this.set('text', "");
+      // this.set('author', "");
     },
-    update(answer){
+    updateAnswer(answer){
       var params = {
         text: this.get('text'),
-        author: this.get('author')//,
-        //id: this.get('question.id')
-
+        author: this.get('author')
       };
       this.set('updateForm', false);
-      this.set('text', "");
-      this.set('author', "");
-
       this.sendAction('updateAnswer', answer, params);
     }
   }
