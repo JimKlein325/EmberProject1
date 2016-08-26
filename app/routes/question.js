@@ -1,15 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  answersCount: function () {
-    return this.get('answers.length');
-  },
-  hasAnswers: function() {
-  return Number(this.get('answers.length')) > 0;
-},
+
   model(params) {
-  return this.store.findRecord('question', params.question_id);
-},
+    return this.store.findRecord('question', params.question_id);
+  },
   actions: {
     updateAnswer(answer, params) {
       Object.keys(params).forEach(function(key) {
@@ -38,6 +33,5 @@ export default Ember.Route.extend({
       question.save();
       this.transitionTo('question');
     },
-
- }
+  }
 });
