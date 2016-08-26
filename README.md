@@ -1,6 +1,6 @@
 # Question and Answer App
 
-#### Ember JS skill demonstration project:  Week 3 - August, 2016
+#### Ember JS skill demonstration project:  Week 4 - August, 2016
 
 #### By Jim Klein
 
