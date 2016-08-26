@@ -1,2 +1,11 @@
 <h5>Votes:  {{voteCount}}</h5>
+<br>
 <button {{action 'addUpvote' answer}}>Vote +</button>
+<br>
+<h5>Mark as favorite</h5>
+{{input type="checkbox" change=(action 'toggleAnswerInFavoritesList' answer)}}
+
+
+     <!-- id="checkbox-policy"
+     name="checkboxPolicy"
+     checked=readPolicyChecked -->
