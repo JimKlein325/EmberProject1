@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   updateForm: false,
+  voteCount: Ember.computed('answer.votes', function() {
+  return this.get('answer.votes');
+}),
+
+
   actions:{
     showForm(){
       this.set('updateForm', true);
@@ -13,6 +18,9 @@ export default Ember.Component.extend({
       };
       this.set('updateForm', false);
       this.sendAction('updateAnswer', answer, params);
+    },
+    addUpvote(answer){
+      this.sendAction('addUpvote', answer);
     }
   }
 });

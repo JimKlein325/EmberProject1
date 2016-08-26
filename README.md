@@ -9,6 +9,7 @@
 Question and Answer App s a sample application for demonstrating basic proficiency in Ember JS and related build tools used to create simple web apps.
 git
 A user can add, edit and view question items, which include the author's name, their question, and notes.   Additional functionality allows other users to add and edit answers to questions.
+Computed Property: Question route, to sort answers by the number of votes each has.
 
 ## App Installation
 

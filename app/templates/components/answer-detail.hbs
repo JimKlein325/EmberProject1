@@ -20,4 +20,7 @@
   <h3>{{answer.text}}</h3>
   <h4>  - {{answer.author}}</h4>
   <button {{action 'showForm'}}>Edit Answer</button>
+  <br>
+  <h5>Votes:  {{voteCount}}</h5>
+  <button {{action 'addUpvote' answer}}>Vote +</button>
 {{/if}}

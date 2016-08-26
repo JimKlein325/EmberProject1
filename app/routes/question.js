@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  sortBy: ['votes:desc'],
+  sortedAnswers: Ember.computed.sort('model.answers', 'sortBy'),
 
   model(params) {
     return this.store.findRecord('question', params.question_id);
@@ -33,5 +35,10 @@ export default Ember.Route.extend({
       question.save();
       this.transitionTo('question');
     },
+    addUpvote(answer){
+      var updateValue = answer.get('votes') + 1;
+      answer.set('votes', Number(updateValue));
+      answer.save();
+    }
   }
 });
