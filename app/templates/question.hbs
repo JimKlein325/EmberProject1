@@ -1,8 +1,5 @@
 <h1>Question View</h1>
 {{question-detail question=model update="update"}}
 <hr>
-<h3>Answers</h3>
-{{#each model.answers as |answer|}}
-  {{answer-detail answer=answer updateAnswer="updateAnswer" addUpvote="addUpvote"}}
-{{/each}}
+{{answer-detail question=model updateAnswer="updateAnswer" addUpvote="addUpvote"}}
 {{answer-new question=model saveAnswer="saveAnswer"}}

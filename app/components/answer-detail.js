@@ -2,10 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   updateForm: false,
-  voteCount: Ember.computed('answer.votes', function() {
-  return this.get('answer.votes');
-}),
+sortBy: ['votes:desc'],
+sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
 
+// sortedAnswersLength: Ember.computed(){
+//   return this.get('qestion.answers.length');
+// },
 
   actions:{
     showForm(){

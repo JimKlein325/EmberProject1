@@ -1,26 +1,28 @@
+<h3>Answers</h3>
+{{#each sortedAnswers as |answer|}}
 {{#if updateForm}}
-  <div>
-    <form>
-      <div class="form-group">
-        <label for="text" class="control-label col-xs-2">Answer</label>
-        <div class="col-xs-10">
+<div>
+  <form>
+    <div class="form-group">
+      <label for="text" class="control-label col-xs-2">Answer</label>
+      <div class="col-xs-10">
         {{textarea cols="80" rows="2" value=text placeholder=answer.text}}
-        </div>
       </div>
-      <div class="form-group">
-        <label for="author" class="control-label col-xs-2">Author</label>
-        <div class="col-xs-10">
+    </div>
+    <div class="form-group">
+      <label for="author" class="control-label col-xs-2">Author</label>
+      <div class="col-xs-10">
         {{input value=author placeholder=answer.author}}
-        </div>
       </div>
-      <button {{action 'updateAnswer' answer}}>Save</button>
-    </form>
-  </div>
+    </div>
+    <button {{action 'updateAnswer' answer}}>Save</button>
+  </form>
+</div>
 {{else}}
-  <h3>{{answer.text}}</h3>
-  <h4>  - {{answer.author}}</h4>
-  <button {{action 'showForm'}}>Edit Answer</button>
-  <br>
-  <h5>Votes:  {{voteCount}}</h5>
-  <button {{action 'addUpvote' answer}}>Vote +</button>
+<h3>{{answer.text}}</h3>
+<h4>  - {{answer.author}}</h4>
+<button {{action 'showForm'}}>Edit Answer</button>
+<br>
+{{vote-display answer=answer addUpvote="addUpvote"}}
 {{/if}}
+{{/each}}

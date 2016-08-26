@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  sortBy: ['votes:desc'],
-  sortedAnswers: Ember.computed.sort('model.answers', 'sortBy'),
 
   model(params) {
     return this.store.findRecord('question', params.question_id);
