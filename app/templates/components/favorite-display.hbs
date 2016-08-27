@@ -1,0 +1,5 @@
+<h3>list display {{answerCount}}</h3>
+{{#each answers as |answer|}}
+<h2> {{answer.question.text}}</h2>
+<h2>Answer: {{answer.text}}</h2>
+{{/each}}
