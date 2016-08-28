@@ -19,10 +19,31 @@
   </form>
 </div>
 {{else}}
-<h3>{{answer.text}}</h3>
-<h4>  - {{answer.author}}</h4>
-<button {{action 'showForm'}}>Edit Answer</button>
-<br>
-{{vote-display answer=answer addUpvote="addUpvote"}}
+<div class="container">
+
+
+  <div class="panel-group">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <!-- <div class="col-xs-10"> -->
+            <h3>{{answer.text}}
+          <!-- </div> -->
+          <!-- <div class="col-xs-2"> -->
+            <button {{action 'showForm'}} class="btn btn-info pull-right">Edit Answer</button></h3>
+          <!-- </div> -->
+        </div>
+        <div class="panel-body">
+          <div class="col-xs-4">
+            <h4>  - {{answer.author}}</h4>
+          </div>
+          <div class="col-xs-6">
+          {{vote-display answer=answer addUpvote="addUpvote"}}
+          </div>
+        </div>
+    </div>
+
+  </div>
+</div>
 {{/if}}
 {{/each}}

@@ -1,11 +1,23 @@
-<h5>Votes:  {{voteCount}}</h5>
+<!-- <div class="col-xs-9"><h5>Votes:  {{voteCount}}</h5>
 <br>
-<button {{action 'addUpvote' answer}}>Vote +</button>
-<br>
-<h5>Mark as favorite</h5>
-{{input type="checkbox" change=(action 'toggleAnswerInFavoritesList' answer)}}
+<button {{action 'addUpvote' answer}} class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
+</div>
+
+<div class="col-xs-3"><h5>Mark as favorite</h5>
+{{input type="checkbox" class="pull-right" change=(action 'toggleAnswerInFavoritesList' answer)}}
+</div> -->
 
 
+<div class="form-group">
+    <div class="col-xs-6">
+                <label class="col-xs-4 control-label">{{voteCount}}</label>
+                    <button {{action 'addUpvote' answer}} class="btn btn-info btn-md"><span class="glyphicon glyphicon-plus"></span>  Vote</button>
+                </div>
+                <label for="inputValue" class="col-md-1 control-label">Favorite</label>
+                <div class="col-md-2">
+                    {{input type="checkbox" class="pull-right" change=(action 'toggleAnswerInFavoritesList' answer)}}
+                </div>
+            </div>
      <!-- id="checkbox-policy"
      name="checkboxPolicy"
      checked=readPolicyChecked -->

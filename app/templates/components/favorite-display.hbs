@@ -1,5 +1,10 @@
-<h3>list display {{answerCount}}</h3>
+{{#if answers}}
 {{#each answers as |answer|}}
-<h2> {{answer.question.text}}</h2>
-<h2>Answer: {{answer.text}}</h2>
+<h3> {{answer.question.text}}</h3>
+<h4>Answer: {{answer.text}}</h4>
 {{/each}}
+{{else}}
+<p>
+  No favorites to display.  Please select your first favorite.
+</p>
+{{/if}}
