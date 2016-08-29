@@ -1,49 +1,6 @@
 {{#if sortedAnswers}}<h3>Answers</h3>{{/if}}
 {{#each sortedAnswers as |answer|}}
-{{#if updateForm}}
-<div>
-  <form>
-    <div class="form-group">
-      <label for="text" class="control-label col-xs-2">Answer</label>
-      <div class="col-xs-10">
-        {{textarea cols="80" rows="2" value=text placeholder=answer.text}}
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="author" class="control-label col-xs-2">Author</label>
-      <div class="col-xs-10">
-        {{input value=author placeholder=answer.author}}
-      </div>
-    </div>
-    <button {{action 'updateAnswer' answer}}>Save</button>
-  </form>
-</div>
-{{else}}
-<div class="container">
 
+{{answer-tile answer=answer  updateAnswer="updateAnswer" addUpvote="addUpvote" showform="showForm"}}
 
-  <div class="panel-group">
-
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <!-- <div class="col-xs-10"> -->
-            <h3>{{answer.text}}
-          <!-- </div> -->
-          <!-- <div class="col-xs-2"> -->
-            <button {{action 'showForm'}} class="btn btn-info pull-right">Edit Answer</button></h3>
-          <!-- </div> -->
-        </div>
-        <div class="panel-body">
-          <div class="col-xs-4">
-            <h4>  - {{answer.author}}</h4>
-          </div>
-          <div class="col-xs-6">
-          {{vote-display answer=answer addUpvote="addUpvote"}}
-          </div>
-        </div>
-    </div>
-
-  </div>
-</div>
-{{/if}}
 {{/each}}
