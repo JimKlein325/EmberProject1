@@ -8,5 +8,4 @@ export default Ember.Component.extend({
   answerCount: Ember.computed('favoritesList.items', function() {
     return this.get('favoritesList').items.length;
   }),
-
 });

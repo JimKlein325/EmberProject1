@@ -4,7 +4,7 @@ export function zeroAnswers(params) {
   var question = params[0];
 
   if(question.get('answers.length') === 0){
-      return  Ember.String.htmlSafe('<p>Be the first to Answer the following question!<p>');
+      return  Ember.String.htmlSafe('<p>Be the first to Answer this question!<p>');
   }
 }
 
