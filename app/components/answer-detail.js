@@ -6,7 +6,6 @@ sortedAnswers: Ember.computed.sort('question.answers', 'sortBy'),
 
   actions:{
     updateAnswer(answer, params){
-      debugger;
       this.sendAction('updateAnswer', answer, params);
     },
     addUpvote(answer){

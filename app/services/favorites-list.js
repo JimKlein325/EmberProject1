@@ -7,8 +7,9 @@ export default Ember.Service.extend({
     this.get('items').pushObject(answer);
   },
   remove(answer){
+    var items = this.get('items');
     var i = items.indexOf(answer);
-    if(i != -1) {
+    if(i !== -1) {
       items.splice(i, 1);
     }
   }

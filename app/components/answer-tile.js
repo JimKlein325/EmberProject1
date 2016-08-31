@@ -15,9 +15,5 @@ export default Ember.Component.extend({
       this.set('updateForm', false);
       this.sendAction('updateAnswer', answer, params);
     },
-    showForm(answer){
-      debugger;
-      this.set('updateForm', true);
-    },
   }
 });

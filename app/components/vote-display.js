@@ -8,7 +8,6 @@ export default Ember.Component.extend({
   }),
   actions:{
     addUpvote(answer){
-      debugger;
       this.sendAction('addUpvote', answer);
     },
     toggleAnswerInFavoritesList(answer) {

@@ -12,7 +12,6 @@ export default Ember.Route.extend({
           answer.set(key,params[key]);
         }
       });
-      debugger;
       answer.save();
       this.transitionTo('question');
     },
